@@ -18,13 +18,12 @@
                 </tr>
             </thead>
             <tbody>
-            {%for i in arr%}
                 <tr>
                     <td>
                     <div class="panel panel-success">
-                        <div class="panel-heading" id="heading{{loop.index}}">A 품질지표</div>
+                        <div class="panel-heading" id="heading">A 품질지표</div>
                         <div class="panel-body">
-                            <div id="qcc{{loop.index}}"></div>
+                            <div id="qcc"></div>
                             <div class="table-wrapper">
                                 <div class="table-scroll">
                                     <table class="table">
@@ -35,7 +34,7 @@
                                                 <th><span class="header">QUALITY</span></th>
                                             </tr>
                                         </thead>
-                                        <tbody id="tbody{{loop.index}}"></tbody>
+                                        <tbody id="tbody"></tbody>
                                     </table>
                                 </div>
                             </div>
@@ -43,7 +42,6 @@
                     </div>
                     </td>
                 </tr>
-            {%endfor%}
             </tbody>
         </table>
     </div>
