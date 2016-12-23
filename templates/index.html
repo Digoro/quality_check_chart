@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css />
+    <link rel="stylesheet" href="/static/qcc.css">
+    <title>QCC</title>
+  </head>
+  <body>
+    <div class="container">
+        <table id="paginatedTable" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>quality</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%for i in arr%}
+                <tr>
+                    <td>
+                    <div class="panel panel-success">
+                        <div class="panel-heading" id="heading{{loop.index}}">A 품질지표</div>
+                        <div class="panel-body">
+                            <div id="qcc{{loop.index}}"></div>
+                            <div class="table-wrapper">
+                                <div class="table-scroll">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><span class="header">CRITERION</span></th>
+                                                <th><span class="header">TIME</span></th>
+                                                <th><span class="header">QUALITY</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody{{loop.index}}"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="/static/qcc.js"></script>
+  </body>
+</html>

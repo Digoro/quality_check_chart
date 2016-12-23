@@ -1,0 +1,23 @@
+body {
+    padding-top: 70px;
+}
+
+.table-wrapper {
+    position:relative;
+}
+
+.table-scroll {
+    height:150px;
+    overflow:auto;
+    margin-top:20px;
+}
+
+.table-wrapper table {
+    width:100%;
+}
+
+.table-wrapper table thead th .header {
+    position:absolute;
+    top:-20px;
+    height:20px;
+}
